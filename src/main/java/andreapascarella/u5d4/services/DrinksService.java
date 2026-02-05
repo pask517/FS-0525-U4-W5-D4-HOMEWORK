@@ -19,5 +19,8 @@ public class DrinksService {
     public void saveDrink(Drink drink) {
         if (drinksRepository.existsByName(drink.getName()))
             throw new ValidationException("Drink con nome " + drink.getName() + " giá esistente");
+
+        this.drinksRepository.save(drink);
     }
+
 }

@@ -1,5 +1,6 @@
 package andreapascarella.u5d4.runners;
 
+import andreapascarella.u5d4.entities.Drink;
 import andreapascarella.u5d4.entities.Pizza;
 import andreapascarella.u5d4.entities.Topping;
 import andreapascarella.u5d4.services.DrinksService;
@@ -40,7 +41,11 @@ public class MyRunner implements CommandLineRunner {
         //pizzasService.savePizza(margherita);
         //pizzasService.savePizza(margheritaConProsciutto);
 
+        Drink lemonade = new Drink("Lemonade", 50, 2.20);
+        //drinksService.saveDrink(lemonade);
 
+        pizzasService.filterByNameLike("prosciutto");
+        
     }
 }
 
