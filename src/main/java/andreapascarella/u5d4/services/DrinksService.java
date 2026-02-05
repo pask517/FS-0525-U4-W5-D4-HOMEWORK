@@ -3,10 +3,12 @@ package andreapascarella.u5d4.services;
 import andreapascarella.u5d4.entities.Drink;
 import andreapascarella.u5d4.exceptions.ValidationException;
 import andreapascarella.u5d4.repositories.DrinksRepository;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
+@Slf4j
 public class DrinksService {
 
     private final DrinksRepository drinksRepository;

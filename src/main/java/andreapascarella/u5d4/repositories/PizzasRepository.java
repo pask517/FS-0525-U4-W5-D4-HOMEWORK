@@ -11,5 +11,5 @@ public interface PizzasRepository extends JpaRepository<Pizza, Long> {
 
     boolean existsByName(String name);
 
-    List<Pizza> findByNameLike(String name);
+    List<Pizza> findByNameContaining(String name);
 }

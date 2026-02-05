@@ -14,7 +14,7 @@ import java.util.List;
 @Table(name = "pizzas")
 public class Pizza extends Item {
 
-    @ManyToMany
+    @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(name = "pizza_toppings", joinColumns = @JoinColumn(name = "pizza_id"), inverseJoinColumns = @JoinColumn(name = "topping_id"))
     private List<Topping> toppingList;
     private boolean isXl = false;

@@ -7,6 +7,8 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 
 @Service
 @Slf4j
@@ -27,8 +29,8 @@ public class PizzasService {
         this.pizzasRepository.save(pizza);
     }
 
-    public Pizza filterByNameLike(String partialName) {
-        return (Pizza) pizzasRepository.findByNameLike(partialName);
+    public List<Pizza> filterByNameContaining(String partialName) {
+        return pizzasRepository.findByNameContaining(partialName);
     }
 
 }

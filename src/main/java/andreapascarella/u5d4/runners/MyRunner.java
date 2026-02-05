@@ -44,8 +44,9 @@ public class MyRunner implements CommandLineRunner {
         Drink lemonade = new Drink("Lemonade", 50, 2.20);
         //drinksService.saveDrink(lemonade);
 
-        pizzasService.filterByNameLike("prosciutto");
-        
+        pizzasService.filterByNameContaining("prosciutto").forEach(System.out::println);
+
+
     }
 }
 
